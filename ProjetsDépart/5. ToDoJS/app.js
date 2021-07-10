@@ -21,7 +21,7 @@ function rajouterUneTache(text) {
 
     const todo = {
         text,
-        // La méthode Dat.now() renvoie le nb de millisecondes écoulées depuis le 1er janvier 1970
+        // La méthode Date.now() renvoie le nb de millisecondes écoulées depuis le 1er janvier 1970
         id: Date.now()
     }
     console.log("Valeur de todo : " + todo.text + " - " + todo.id);

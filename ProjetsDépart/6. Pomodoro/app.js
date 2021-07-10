@@ -6,8 +6,8 @@ const btnReset = document.querySelector('.b3');
 const cycles = document.querySelector('h2');
 
 let checkInterval = false;
-let tempsInitial = 1800;
-let tempsDeRepos = 300;
+let tempsInitial = 30;
+let tempsDeRepos = 30;
 let pause = false;
 let nbDeCycles = 0;
 cycles.innerText = `Nombre de cycles ${nbDeCycles}`;
@@ -30,8 +30,8 @@ btnGo.addEventListener('click', () => {
                 affichageTravail.innerText = `${Math.trunc(tempsInitial/60)} : ${(tempsInitial % 60 < 10) ? `0${tempsInitial % 60}` : tempsInitial % 60}`;
             }
             else if(pause === false && tempsDeRepos === 0 && tempsInitial === 0) {
-                tempsInitial = 1800;
-                tempsDeRepos = 300;
+                tempsInitial = 30;
+                tempsDeRepos = 30;
                 nbDeCycles++;
                 cycles.innerText = `Nombre de cycles ${nbDeCycles}`;
                 affichageTravail.innerText = `${Math.trunc(tempsInitial/60)} : ${(tempsInitial % 60 < 10) ? `0${tempsInitial % 60}` : tempsInitial % 60}`;
@@ -47,8 +47,8 @@ btnGo.addEventListener('click', () => {
         btnReset.addEventListener('click', () => {
             clearInterval(timer);
             checkInterval = false;
-            tempsInitial = 1800;
-            tempsDeRepos = 300;
+            tempsInitial = 30;
+            tempsDeRepos = 30;
             affichageTravail.innerText = `${Math.trunc(tempsInitial/60)} : ${(tempsInitial % 60 < 10) ? `0${tempsInitial % 60}` : tempsInitial % 60}`;
             affichagePause.innerText = `${Math.trunc(tempsDeRepos/60)} : ${(tempsDeRepos % 60 < 10) ? `0${tempsDeRepos % 60}` : tempsDeRepos % 60}`;          
         })
