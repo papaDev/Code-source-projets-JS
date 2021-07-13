@@ -2,7 +2,6 @@ const audioPlayer = document.querySelector('audio');
 
 audioPlayer.addEventListener('play', () => {
 
-
     const contexteAudio = new AudioContext();
     const src = contexteAudio.createMediaElementSource(audioPlayer);
     const analyseur = contexteAudio.createAnalyser();
